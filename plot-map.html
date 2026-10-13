@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Plot Map</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Farm Plot Navigation</h1>
+        <p>Click on a plot to see details</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm-info.html">Farm Dashboard</a>
+        <a href="advisory.html">Irrigation Advisory</a>
+        <a href="irrigation-table.html">Sensor Data</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="plot-map.html" class="active">Plot Map</a>
+        <a href="registration.html">Registration</a>
+        <a href="weather.html">Weather</a>
+        <a href="media.html">Multimedia</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Farm Map</h2>
+
+            <img src="assets/images/farm-map.svg"
+                 width="600"
+                 height="400"
+                 alt="Farm Plot Map"
+                 usemap="#farmmap">
+
+            <map name="farmmap">
+                <area shape="rect"
+                      coords="20,40,180,360"
+                      href="#plot-a"
+                      alt="Plot A">
+
+                <area shape="rect"
+                      coords="220,40,380,360"
+                      href="#plot-b"
+                      alt="Plot B">
+
+                <area shape="rect"
+                      coords="420,40,580,360"
+                      href="#plot-c"
+                      alt="Plot C">
+            </map>
+        </section>
+
+        <hr>
+
+        <section id="plot-a">
+            <h3>Plot A Details</h3>
+            <p><b>Plot ID:</b> A-101</p>
+            <p><b>Farmer Name:</b> Ramesh Patil</p>
+            <p><b>Crop:</b> Sugarcane</p>
+            <p><b>Soil Moisture:</b> 42%</p>
+            <p><b>Recommendation:</b> Irrigate for 2 hours 30 minutes.</p>
+        </section>
+
+        <section id="plot-b">
+            <h3>Plot B Details</h3>
+            <p><b>Plot ID:</b> B-205</p>
+            <p><b>Farmer Name:</b> Suresh Kumar</p>
+            <p><b>Crop:</b> Sugarcane</p>
+            <p><b>Soil Moisture:</b> 58%</p>
+            <p><b>Recommendation:</b> Irrigation can be delayed due to expected rainfall.</p>
+        </section>
+
+        <section id="plot-c">
+            <h3>Plot C Details</h3>
+            <p><b>Plot ID:</b> C-310</p>
+            <p><b>Farmer Name:</b> Mahesh Shinde</p>
+            <p><b>Crop:</b> Sugarcane</p>
+            <p><b>Soil Moisture:</b> 28%</p>
+            <p><b>Recommendation:</b> Soil moisture is low. Irrigation recommended.</p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    </footer>
+
+</body>
+</html>

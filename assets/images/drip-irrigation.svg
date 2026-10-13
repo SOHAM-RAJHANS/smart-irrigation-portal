@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect y="130" width="300" height="70" fill="#8B4513"/>
+  <rect x="20" y="100" width="260" height="8" fill="#666"/>
+  <line x1="60" y1="108" x2="60" y2="140" stroke="#888" stroke-width="2"/>
+  <line x1="120" y1="108" x2="120" y2="140" stroke="#888" stroke-width="2"/>
+  <line x1="180" y1="108" x2="180" y2="140" stroke="#888" stroke-width="2"/>
+  <line x1="240" y1="108" x2="240" y2="140" stroke="#888" stroke-width="2"/>
+  <circle cx="60" cy="148" r="3" fill="#4FC3F7"/>
+  <circle cx="120" cy="148" r="3" fill="#4FC3F7"/>
+  <circle cx="180" cy="148" r="3" fill="#4FC3F7"/>
+  <circle cx="240" cy="148" r="3" fill="#4FC3F7"/>
+  <line x1="60" y1="130" x2="60" y2="115" stroke="#228B22" stroke-width="3"/>
+  <line x1="120" y1="130" x2="120" y2="112" stroke="#228B22" stroke-width="3"/>
+  <line x1="180" y1="130" x2="180" y2="118" stroke="#228B22" stroke-width="3"/>
+  <line x1="240" y1="130" x2="240" y2="110" stroke="#228B22" stroke-width="3"/>
+  <text x="150" y="185" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Drip Irrigation System</text>
+</svg>

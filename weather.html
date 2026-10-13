@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Weather Information</h1>
+        <p>Weather forecast and farm location</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm-info.html">Farm Dashboard</a>
+        <a href="advisory.html">Irrigation Advisory</a>
+        <a href="irrigation-table.html">Sensor Data</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="plot-map.html">Plot Map</a>
+        <a href="registration.html">Registration</a>
+        <a href="weather.html" class="active">Weather</a>
+        <a href="media.html">Multimedia</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Today's Weather Forecast</h2>
+
+            <h3>IMD Weather Forecast</h3>
+
+            <iframe src="https://mausam.imd.gov.in/imd_latest/contents/forecast.php"
+                    width="800"
+                    height="400"
+                    title="IMD Weather Forecast">
+            </iframe>
+
+            <p>
+                In case the forecast does not load above, you can check it directly
+                on the IMD website.
+                <a href="https://mausam.imd.gov.in/imd_latest/contents/forecast.php" target="_blank">
+                    Click here to open IMD forecast
+                </a>
+            </p>
+
+            <h3>Farm Location on Google Maps</h3>
+
+            <iframe src="https://www.google.com/maps?q=KIAAR+Sameerwadi+Karnataka&output=embed"
+                    width="800"
+                    height="400"
+                    title="Farm Location Map">
+            </iframe>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    </footer>
+
+</body>
+</html>

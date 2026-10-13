@@ -1,0 +1,8 @@
+{
+  "place": "Sameerwadi, Karnataka",
+  "days": [
+    { "day": "Today", "temp": "31C", "rain": "10%", "note": "Good day for irrigation" },
+    { "day": "Tomorrow", "temp": "29C", "rain": "70%", "note": "Rain expected, delay irrigation" },
+    { "day": "Day After", "temp": "30C", "rain": "20%", "note": "Check soil moisture again" }
+  ]
+}

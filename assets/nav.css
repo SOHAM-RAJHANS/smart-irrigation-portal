@@ -1,0 +1,19 @@
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery-grid figure {
+    width: 220px;
+}
+
+.gallery-grid figure img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+.gallery-grid figure img:hover {
+    transform: scale(1.08);
+}

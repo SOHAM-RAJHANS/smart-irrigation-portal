@@ -1,0 +1,15 @@
+.page-wrapper {
+    overflow: hidden;
+}
+
+.sidebar {
+    float: left;
+    width: 25%;
+    padding: 15px;
+}
+
+.content {
+    float: right;
+    width: 70%;
+    padding: 0 15px;
+}

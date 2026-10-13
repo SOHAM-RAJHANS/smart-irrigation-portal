@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soil Moisture and Irrigation Table</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/table.css">
+</head>
+<body>
+
+    <header>
+        <h1>Soil Moisture &amp; Irrigation Recommendation Table</h1>
+        <p>Sensor Data Summary for Different Plots</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm-info.html">Farm Dashboard</a>
+        <a href="advisory.html">Irrigation Advisory</a>
+        <a href="irrigation-table.html" class="active">Sensor Data</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="plot-map.html">Plot Map</a>
+        <a href="registration.html">Registration</a>
+        <a href="weather.html">Weather</a>
+        <a href="media.html">Multimedia</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Irrigation Recommendation Data</h2>
+
+            <table>
+                <caption>
+                    Plot-wise Soil Moisture and Irrigation Recommendation
+                </caption>
+
+                <thead>
+                    <tr>
+                        <th rowspan="2">Plot ID</th>
+                        <th rowspan="2">Farmer Name</th>
+                        <th colspan="2">Field Condition</th>
+                        <th rowspan="2">Irrigation Recommendation</th>
+                        <th rowspan="2">Water Requirement</th>
+                    </tr>
+
+                    <tr>
+                        <th>Soil Moisture (%)</th>
+                        <th>Weather</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>A-101</td>
+                        <td>Ramesh Patil</td>
+                        <td>42</td>
+                        <td>Partly Cloudy</td>
+                        <td>Irrigate for 2 hours 30 minutes</td>
+                        <td>Medium</td>
+                    </tr>
+
+                    <tr>
+                        <td>B-205</td>
+                        <td>Suresh Kumar</td>
+                        <td>58</td>
+                        <td>Rain Expected</td>
+                        <td>Delay irrigation</td>
+                        <td>Low</td>
+                    </tr>
+
+                    <tr>
+                        <td>C-310</td>
+                        <td>Mahesh Shinde</td>
+                        <td>28</td>
+                        <td>Sunny</td>
+                        <td>Irrigate immediately</td>
+                        <td>High</td>
+                    </tr>
+                </tbody>
+
+                <tfoot>
+                    <tr>
+                        <td colspan="6">
+                            <small>
+                                Data collected from soil moisture sensors,
+                                weather station and farm records. Last updated: 08 July 2026.
+                            </small>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    </footer>
+
+</body>
+</html>

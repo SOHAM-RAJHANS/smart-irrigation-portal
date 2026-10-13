@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation Advisory System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+            line-height: 1.7;
+            color: #1d1d1f;
+            background-color: #ffffff;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Poppins', Arial, sans-serif;
+        }
+
+        header {
+            background-color: #1d1d1f;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.8rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 5px;
+        }
+
+        header p {
+            font-size: 1rem;
+            font-style: italic;
+        }
+
+        nav {
+            background-color: #1d1d1f;
+            padding: 10px;
+            text-align: center;
+            border-top: 1px solid #333;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 8px;
+            padding: 5px 12px;
+            font-size: 0.95rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        nav a.active {
+            background-color: white;
+            color: #2e7d32;
+            border-radius: 3px;
+            font-weight: bold;
+        }
+
+        main {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 0 15px;
+        }
+
+        section {
+            background-color: #f5f5f7;
+            padding: 36px 24px;
+            margin-bottom: 24px;
+            border: none;
+            border-radius: 14px;
+        }
+
+        section h2 {
+            color: #2e7d32;
+            font-size: 1.6rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 14px;
+            border-bottom: 2px solid #c8e6c9;
+            padding-bottom: 8px;
+        }
+
+        section h3 {
+            color: #388e3c;
+            font-size: 1.15rem;
+            margin-bottom: 8px;
+        }
+
+        article p {
+            margin-bottom: 10px;
+        }
+
+        aside {
+            background-color: #e8f5e9;
+            padding: 15px;
+            border-left: 4px solid #4caf50;
+            margin-top: 15px;
+        }
+
+        aside h2 {
+            border-bottom: none;
+            margin-bottom: 8px;
+        }
+
+        aside p {
+            margin-bottom: 4px;
+        }
+
+        ol, ul {
+            padding-left: 22px;
+            margin-bottom: 14px;
+        }
+
+        ol li, ul li {
+            margin-bottom: 8px;
+        }
+
+        dl {
+            margin-bottom: 14px;
+        }
+
+        dt {
+            color: #2e7d32;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        dd {
+            margin-left: 20px;
+            color: #555;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 12px 0;
+            font-size: 0.95rem;
+        }
+
+        caption {
+            caption-side: top;
+            padding: 8px;
+            font-weight: bold;
+            color: #2e7d32;
+        }
+
+        thead {
+            background-color: #2e7d32;
+            color: white;
+        }
+
+        thead th {
+            padding: 10px;
+            text-align: left;
+        }
+
+        tbody td {
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tbody tr:first-child td {
+            font-weight: normal;
+        }
+
+        tbody tr:hover {
+            background-color: #e8f5e9;
+        }
+
+        tfoot {
+            background-color: #e8f5e9;
+        }
+
+        tfoot td {
+            padding: 8px 10px;
+            text-align: center;
+            border: 1px solid #c8e6c9;
+        }
+
+        fieldset {
+            border: 1px solid #aaa;
+            padding: 15px;
+            margin-bottom: 15px;
+        }
+
+        legend {
+            color: #2e7d32;
+            font-weight: bold;
+            padding: 0 8px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 4px;
+            font-weight: bold;
+            color: #444;
+        }
+
+        input[type="text"],
+        input[type="tel"],
+        input[type="email"],
+        input[type="date"],
+        input[type="file"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+            font-size: 0.95rem;
+            margin-bottom: 12px;
+        }
+
+        input[type="text"]:focus,
+        input[type="tel"]:focus,
+        input[type="email"]:focus,
+        input[type="number"]:focus,
+        select:focus {
+            border-color: #2e7d32;
+            outline: none;
+        }
+
+        input[type="submit"],
+        input[type="reset"] {
+            padding: 8px 20px;
+            margin-right: 8px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        input[type="submit"] {
+            background-color: #2e7d32;
+            color: white;
+            border: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #388e3c;
+        }
+
+        input[type="reset"] {
+            background-color: #eee;
+            border: 1px solid #aaa;
+        }
+
+        figure {
+            display: inline-block;
+            margin: 10px 15px 10px 0;
+            text-align: center;
+        }
+
+        figure img {
+            display: block;
+            border: 1px solid #ccc;
+        }
+
+        figcaption {
+            margin-top: 6px;
+            font-weight: bold;
+            color: #555;
+            font-size: 0.9rem;
+        }
+
+        iframe {
+            border: 1px solid #aaa;
+            max-width: 100%;
+            display: block;
+            margin: 10px 0;
+        }
+
+        video, audio {
+            display: block;
+            margin: 10px 0;
+            max-width: 100%;
+        }
+
+        footer {
+            background-color: #f5f5f7;
+            color: #555;
+            text-align: center;
+            padding: 12px;
+            font-size: 0.9rem;
+        }
+
+        footer hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin-bottom: 8px;
+        }
+
+        mark {
+            background-color: #fff176;
+            padding: 1px 4px;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #ccc;
+            margin: 15px 0;
+        }
+
+        a {
+            color: #2e7d32;
+        }
+
+        a:active {
+            color: #1b5e20;
+        }
+
+        .btn {
+            border-radius: 30px;
+            padding: 12px 28px;
+        }
+
+        .categories-card {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+            padding: 15px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            background-color: white;
+        }
+
+        .categories-card h3 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .categories-card ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .categories-card li {
+            margin-bottom: 6px;
+        }
+
+        .categories-card li:hover {
+            color: #2e7d32;
+        }
+
+        .plot-cards {
+            text-align: center;
+        }
+
+        .plot-card {
+            display: inline-block;
+            width: 200px;
+            margin: 10px;
+            padding: 18px 15px;
+            border: 1px solid #ccc;
+            border-radius: 12px;
+            background-color: #fff;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+            vertical-align: top;
+        }
+
+        .plot-card h4 {
+            color: #2e7d32;
+            margin-bottom: 8px;
+        }
+
+        .plot-card p {
+            margin-bottom: 4px;
+            font-size: 0.9rem;
+        }
+
+        .offer-box {
+            background-color: #fff3e0;
+            border: 2px solid #ff9800;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            animation: glow 2s infinite;
+        }
+
+        .offer-box h3 {
+            color: #e65100;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+            text-shadow: 0 0 10px #ff9800;
+        }
+
+        .offer-box p {
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 0 5px #ff9800; }
+            50% { box-shadow: 0 0 20px #ff9800; }
+            100% { box-shadow: 0 0 5px #ff9800; }
+        }
+
+        .page-wrapper {
+            overflow: hidden;
+        }
+
+        .sidebar {
+            float: left;
+            width: 25%;
+            padding: 15px;
+        }
+
+        .content {
+            float: right;
+            width: 70%;
+            padding: 0 15px;
+        }
+
+        .gallery-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .gallery-grid figure {
+            width: 220px;
+        }
+
+        .gallery-grid figure img {
+            width: 100%;
+            height: auto;
+            transition: transform 0.3s;
+        }
+
+        .gallery-grid figure img:hover {
+            transform: scale(1.08);
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+        }
+
+        nav ul li a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 15px;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+            background-color: #333;
+        }
+
+        .hero {
+            position: relative;
+            min-height: 85vh;
+            overflow: hidden;
+            background-color: #1d1d1f;
+            border-radius: 0;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+
+        .hero video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            margin: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-text {
+            position: relative;
+            text-align: center;
+            color: white;
+            padding: 140px 20px 70px 20px;
+        }
+
+        .hero-text h2 {
+            color: white;
+            font-size: 2.6rem;
+            letter-spacing: -1px;
+            border: none;
+            margin-bottom: 12px;
+            padding: 0;
+        }
+
+        .hero-text p {
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+        }
+
+        .scroll-down {
+            position: relative;
+            text-align: center;
+            color: white;
+            font-size: 1.6rem;
+            padding-bottom: 25px;
+            animation: drop 2s ease-in-out infinite;
+        }
+
+        @keyframes drop {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(8px); }
+        }
+
+        .stat-num {
+            font-size: 2.4rem;
+            font-weight: bold;
+            letter-spacing: -0.5px;
+            color: #2e7d32;
+        }
+
+        .review-card {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 14px;
+            padding: 40px 30px;
+            margin: 0 auto;
+            max-width: 640px;
+            text-align: center;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.08);
+        }
+
+        .review-card p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        .register-corner {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #2e7d32;
+            color: white;
+            padding: 12px 22px;
+            border-radius: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+            z-index: 1000;
+            animation: glow 2s infinite;
+        }
+
+        .register-corner:hover {
+            background-color: #388e3c;
+            color: white;
+            text-decoration: none;
+        }
+
+        #welcomeBox {
+            text-align: center;
+            font-weight: bold;
+            color: #2e7d32;
+            margin-bottom: 12px;
+        }
+
+        #resultBox {
+            background-color: #e8f5e9;
+            border: 1px solid #4caf50;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        #weatherBox {
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 10px;
+            margin-top: 10px;
+        }
+
+        .hint {
+            font-size: 0.85rem;
+            color: #777;
+        }
+
+        .carousel img {
+            height: 260px;
+            object-fit: contain;
+            background-color: #f4f4f4;
+        }
+
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #2e7d32;
+            border-radius: 50%;
+        }
+
+        details {
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            padding: 8px 10px;
+            background-color: white;
+        }
+
+        summary {
+            font-weight: bold;
+            color: #2e7d32;
+            cursor: pointer;
+        }
+
+        meter, progress {
+            width: 100%;
+            height: 18px;
+        }
+
+        @media (max-width: 700px) {
+            .sidebar {
+                float: none;
+                width: 100%;
+            }
+            .content {
+                float: none;
+                width: 100%;
+            }
+            .plot-card {
+                width: 100%;
+                margin: 8px 0;
+            }
+            .hero-text h2 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header style="background-color: #1d1d1f; color: white; text-align: center; padding: 20px; border-bottom: 3px solid #2e7d32;">
+        <h1 style="font-size: 1.8rem; margin-bottom: 5px;">AI-based Smart Irrigation Advisory System</h1>
+        <p style="font-style: italic;">Smart Irrigation using AI &amp; Sensor Technology</p>
+        <p style="font-style: normal; font-size: 0.9rem;">New farmer? <a href="registration.html" style="color: #ffd54f;">Register your farm here</a></p>
+    </header>
+
+    <nav class="navbar navbar-expand-md navbar-dark">
+        <div class="container-fluid">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="farm-info.html">Farm Dashboard</a></li>
+                <li class="nav-item"><a class="nav-link" href="advisory.html">Irrigation Advisory</a></li>
+                <li class="nav-item"><a class="nav-link" href="irrigation-table.html">Sensor Data</a></li>
+                <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="plot-map.html">Plot Map</a></li>
+                <li class="nav-item"><a class="nav-link" href="registration.html">Registration</a></li>
+                <li class="nav-item"><a class="nav-link" href="weather.html">Weather</a></li>
+                <li class="nav-item"><a class="nav-link" href="media.html">Multimedia</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <video autoplay muted loop playsinline>
+            <source src="assets/video/smart-irrigation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-text">
+            <h2>We help sugarcane farmers water at the right time.</h2>
+            <p>Soil sensors, weather forecasts and simple advice for Sameerwadi fields.</p>
+            <p>
+                <a href="#work" class="btn btn-light">See What We Do</a>
+                <a href="registration.html" class="btn btn-success">Register Your Farm</a>
+            </p>
+        </div>
+        <div class="scroll-down">▼</div>
+    </section>
+
+    <div class="container mt-3">
+        <p id="welcomeBox">Welcome to the Smart Irrigation Portal</p>
+
+        <section id="work">
+            <h2 class="text-center">What We Do</h2>
+            <article>
+                <p>
+                    This portal is built for use case <b>KJS-AGR-01</b> which deals with
+                    irrigation advisory for <mark>sugarcane crops</mark> using AI and sensor-based
+                    technology. The project is carried out in collaboration with
+                    KIAAR, Sameerwadi and Godavari Biorefineries Ltd.
+                </p>
+                <p>
+                    Sugarcane farming needs a lot of water and right now most farmers
+                    decide irrigation based on their own experience. This system tries
+                    to give them proper data-driven advice by collecting soil moisture
+                    readings, weather data and crop stage information. Last updated:
+                    <time datetime="2026-07-08">08 July 2026</time>.
+                </p>
+            </article>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <h3>How It Helps</h3>
+                    <ul>
+                        <li>Drip schedules matched to soil moisture readings.</li>
+                        <li>Rain-aware delays so no water is wasted.</li>
+                        <li>Simple advice every morning before field work.</li>
+                    </ul>
+                    <p>
+                        <a href="farm-info.html" class="btn btn-success">Open Farm Dashboard</a>
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-6 text-center">
+                            <figure>
+                                <img src="assets/images/sugarcane-evening.jpg" alt="Healthy Sugarcane Crop" width="300" height="200" class="img-fluid rounded work-img">
+                                <figcaption>Healthy Crop</figcaption>
+                            </figure>
+                        </div>
+                        <div class="col-6 text-center">
+                            <figure>
+                                <img src="assets/images/drip.jpg" alt="Drip Irrigation System" width="300" height="200" class="img-fluid rounded work-img">
+                                <figcaption>Drip System</figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <p class="stat-num">40%</p>
+                    <p>less water with drip schedules</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="stat-num">3</p>
+                    <p>plots under live monitoring</p>
+                </div>
+                <div class="col-md-4">
+                    <p class="stat-num">15 min</p>
+                    <p>between sensor readings</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 class="text-center">What Farmers Say</h2>
+            <div id="reviewCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="review-card">
+                            <p>"The advisory told us exactly when to run drip. Our water bill dropped in one season."</p>
+                            <p><b>Ramesh Patil</b>, Plot A-101, Sameerwadi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <p>"Rain was coming and the portal told us to wait. It was right."</p>
+                            <p><b>Suresh Kumar</b>, Plot B-205, Sameerwadi</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="review-card">
+                            <p>"Simple to use. I check moisture in the morning and plan the whole day."</p>
+                            <p><b>Mahesh Shinde</b>, Plot C-310, Sameerwadi</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#reviewCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#reviewCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p><b>Organization:</b> KIAAR / GBL Smart Agriculture Support Center</p>
+            <p><b>Location:</b> Sameerwadi, Karnataka</p>
+            <p><b>Email:</b> kiaar.irrigation@somaiya.edu</p>
+            <p><b>Help Line:</b> 080-26900210</p>
+        </section>
+    </div>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System | Web Development Laboratory Experiment 1</p>
+    </footer>
+
+    <a href="registration.html" class="register-corner">Register</a>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        function setCookie(cname, cvalue, days) {
+            var d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = cname + "=" + cvalue + ";expires=" + d.toUTCString() + ";path=/";
+        }
+
+        function getCookie(cname) {
+            var name = cname + "=";
+            var parts = document.cookie.split(";");
+            for (var i = 0; i < parts.length; i++) {
+                var c = parts[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1);
+                }
+                if (c.indexOf(name) == 0) {
+                    return c.substring(name.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function checkCookie() {
+            var old = getCookie("farmer");
+            if (old != "") {
+                document.getElementById("welcomeBox").innerHTML = "Welcome back, " + old + ".";
+            }
+            console.log("Home page opened.");
+        }
+
+        window.onload = function() {
+            checkCookie();
+        };
+    </script>
+    <script>
+        $(document).ready(function() {
+            $(".work-img").hover(function() {
+                $(this).css("opacity", "0.85");
+            }, function() {
+                $(this).css("opacity", "1");
+            });
+
+            $(".review-card").click(function() {
+                $(this).find("p").first().css("color", "#2e7d32");
+            });
+        });
+    </script>
+
+</body>
+</html>

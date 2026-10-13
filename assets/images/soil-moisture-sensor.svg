@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect y="130" width="300" height="70" fill="#8B4513"/>
+  <rect x="120" y="80" width="60" height="50" rx="5" fill="#FF9800" stroke="#E65100" stroke-width="2"/>
+  <rect x="130" y="90" width="40" height="20" fill="#C8E6C9"/>
+  <rect x="145" y="130" width="10" height="40" fill="#888"/>
+  <text x="150" y="105" font-family="Arial" font-size="10" fill="#333" text-anchor="middle">42%</text>
+  <line x1="180" y1="105" x2="230" y2="105" stroke="#333" stroke-width="2"/>
+  <circle cx="235" cy="105" r="8" fill="#eee" stroke="#333" stroke-width="1"/>
+  <text x="235" y="109" font-family="Arial" font-size="7" fill="#333" text-anchor="middle">LCD</text>
+  <text x="150" y="185" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Soil Moisture Sensor</text>
+</svg>

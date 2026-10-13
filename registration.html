@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Registration</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/form.css">
+</head>
+<body>
+
+    <header>
+        <h1>Farmer Registration Form</h1>
+        <p>Register your farm for Smart Irrigation Advisory</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm-info.html">Farm Dashboard</a>
+        <a href="advisory.html">Irrigation Advisory</a>
+        <a href="irrigation-table.html">Sensor Data</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="plot-map.html">Plot Map</a>
+        <a href="registration.html" class="active">Registration</a>
+        <a href="weather.html">Weather</a>
+        <a href="media.html">Multimedia</a>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Enter Farmer and Farm Details</h2>
+
+            <form action="#" method="get" enctype="multipart/form-data" onsubmit="return validateForm()">
+
+                <fieldset>
+                    <legend><b>Farmer Personal Details</b></legend>
+
+                    <p>
+                        <label for="name">Farmer Name:</label><br>
+                        <input type="text"
+                               id="name"
+                               name="name"
+                               placeholder="Enter full name"
+                               autofocus
+                               required
+                               onkeyup="countName()">
+                        <span id="countBox"></span>
+                    </p>
+
+                    <p>
+                        <label for="mobile">Mobile Number:</label><br>
+                        <input type="tel"
+                               id="mobile"
+                               name="mobile"
+                               placeholder="Enter 10 digit mobile number"
+                               pattern="[0-9]{10}"
+                               title="Mobile number must be exactly 10 digits"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="email">Email:</label><br>
+                        <input type="email"
+                               id="email"
+                               name="email"
+                               placeholder="Enter email address"
+                               required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend><b>Farm Details</b></legend>
+
+                    <p>
+                        <label for="plotid">Plot ID:</label><br>
+                        <input type="text"
+                               id="plotid"
+                               name="plotid"
+                               placeholder="Example: A-101"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="village">Village:</label><br>
+                        <input type="text"
+                               id="village"
+                               name="village"
+                               placeholder="Enter village name"
+                               list="villageList"
+                               required>
+                        <datalist id="villageList">
+                            <option value="Sameerwadi"></option>
+                            <option value="Mahalingpur"></option>
+                            <option value="Mudhol"></option>
+                            <option value="Jamkhandi"></option>
+                        </datalist>
+                    </p>
+
+                    <p>
+                        <label for="cropstage">Crop Stage:</label><br>
+                        <select id="cropstage" name="cropstage" required>
+                            <option value="">Select crop stage</option>
+                            <option value="germination">Germination</option>
+                            <option value="tillering">Tillering</option>
+                            <option value="grand-growth">Grand Growth</option>
+                            <option value="maturity">Maturity</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="soiltype">Soil Type:</label><br>
+                        <select id="soiltype" name="soiltype" required>
+                            <option value="">Select soil type</option>
+                            <option value="sandy">Sandy</option>
+                            <option value="loamy">Loamy</option>
+                            <option value="clayey">Clayey</option>
+                            <option value="red">Red</option>
+                            <option value="black">Black</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="irrigationmethod">Irrigation Method:</label><br>
+                        <select id="irrigationmethod" name="irrigationmethod" required>
+                            <option value="">Select irrigation method</option>
+                            <option value="drip">Drip</option>
+                            <option value="sprinkler">Sprinkler</option>
+                            <option value="flood">Flood</option>
+                            <option value="canal">Canal</option>
+                        </select>
+                    </p>
+
+                    <p>
+                        <label for="date">Date:</label><br>
+                        <input type="date"
+                               id="date"
+                               name="date"
+                               required>
+                    </p>
+
+                    <p>
+                        <label for="farmphoto">Upload Farm Photo:</label><br>
+                        <input type="file"
+                               id="farmphoto"
+                               name="farmphoto"
+                               required>
+                    </p>
+                </fieldset>
+
+                <p>
+                    <input type="submit" value="Register">
+                    <input type="reset" value="Clear Form">
+                </p>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    </footer>
+
+    <script>
+        function countName() {
+            var n = document.getElementById("name").value;
+            document.getElementById("countBox").innerHTML = "Letters: " + n.length;
+        }
+
+        function setCookie(cname, cvalue, days) {
+            var d = new Date();
+            d.setTime(d.getTime() + (days * 24 * 60 * 60 * 1000));
+            document.cookie = cname + "=" + cvalue + ";expires=" + d.toUTCString() + ";path=/";
+        }
+
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var mobile = document.getElementById("mobile").value;
+            var plot = document.getElementById("plotid").value;
+            var re = /^[0-9]{10}$/;
+            if (name == "" || name.length < 3) {
+                alert("Please enter farmer name correctly.");
+                return false;
+            }
+            if (re.test(mobile) == false) {
+                alert("Mobile number must be exactly 10 digits.");
+                return false;
+            }
+            if (plot == "") {
+                alert("Please enter plot ID.");
+                return false;
+            }
+            setCookie("farmer", name, 7);
+            alert("Thank you " + name.toUpperCase() + ". Registration saved for " + plot + ".");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

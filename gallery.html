@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farm Gallery</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/nav.css">
+</head>
+<body>
+
+    <header>
+        <h1>Farm Gallery</h1>
+        <p>Different farm conditions and devices</p>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="farm-info.html">Farm Dashboard</a>
+        <a href="advisory.html">Irrigation Advisory</a>
+        <a href="irrigation-table.html">Sensor Data</a>
+        <a href="gallery.html" class="active">Gallery</a>
+        <a href="plot-map.html">Plot Map</a>
+        <a href="registration.html">Registration</a>
+        <a href="weather.html">Weather</a>
+        <a href="media.html">Multimedia</a>
+    </nav>
+
+    <main>
+        <section id="farm-images">
+            <h2>Farm Images</h2>
+
+            <div class="gallery-grid">
+            <figure>
+                <a href="#detail-healthy-crop">
+                    <img src="assets/images/sugarcane-field.jpg"
+                         alt="Healthy Sugarcane Crop"
+                         title="Healthy Sugarcane Crop"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Healthy Sugarcane Crop</figcaption>
+            </figure>
+
+            <figure>
+                <a href="#detail-drip-irrigation">
+                    <img src="assets/images/drip.jpg"
+                         alt="Drip Irrigation System"
+                         title="Drip Irrigation System"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Drip Irrigation System</figcaption>
+            </figure>
+
+            <figure>
+                <a href="#detail-sensor">
+                    <img src="assets/images/sensor.jpg"
+                         alt="Temperature and Humidity Sensor"
+                         title="Temperature and Humidity Sensor"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Temperature and Humidity Sensor</figcaption>
+            </figure>
+
+            <figure>
+                <a href="#detail-weather-station">
+                    <img src="assets/images/weather.jpg"
+                         alt="Automatic Weather Station"
+                         title="Automatic Weather Station"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Automatic Weather Station</figcaption>
+            </figure>
+
+            <figure>
+                <a href="#detail-canal-water">
+                    <img src="assets/images/canal.jpg"
+                         alt="Canal Water Supply"
+                         title="Canal Water Supply"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Canal Water Supply</figcaption>
+            </figure>
+
+            <figure>
+                <a href="#detail-farmer-field">
+                    <img src="assets/images/farmer.jpg"
+                         alt="Farmer in Field"
+                         title="Farmer in Field"
+                         width="300"
+                         height="200">
+                </a>
+                <figcaption>Farmer in Field</figcaption>
+            </figure>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="detail-healthy-crop">
+            <h3>Healthy Sugarcane Crop</h3>
+            <p>
+                A well-maintained sugarcane field at the grand growth stage.
+                The plants are tall and green which means irrigation scheduling
+                and nutrient management has been done properly.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+
+        <section id="detail-drip-irrigation">
+            <h3>Drip Irrigation System</h3>
+            <p>
+                Drip lines laid along the crop rows delivering water directly
+                to the root zone. This method saves almost 40-50% water compared
+                to flood irrigation and is widely used in sugarcane fields
+                around Sameerwadi.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+
+        <section id="detail-sensor">
+            <h3>Temperature and Humidity Sensor</h3>
+            <p>
+                A small digital sensor fixed near the crop rows.
+                It sends temperature and humidity readings to the central system every 15 minutes
+                using a wireless node. The advisory combines these readings with soil data
+                to decide when to irrigate.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+
+        <section id="detail-weather-station">
+            <h3>Automatic Weather Station</h3>
+            <p>
+                Installed at the KIAAR field centre. It records temperature,
+                relative humidity, wind speed, rainfall and solar radiation.
+                This data is merged with IMD forecast to predict irrigation
+                need for the next 3 days.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+
+        <section id="detail-canal-water">
+            <h3>Canal Water Supply</h3>
+            <p>
+                Canal water reaches many Sameerwadi fields through branch canals.
+                The portal checks canal release days before advising extra drip,
+                so farmers never pay for water twice.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+
+        <section id="detail-farmer-field">
+            <h3>Farmer in Field</h3>
+            <p>
+                A farmer sprays the crop early in the morning when the air is cool.
+                Field visits like this confirm what the sensors report from the plots.
+            </p>
+            <p><a href="#farm-images">Back to Gallery</a></p>
+        </section>
+    </main>
+
+    <footer>
+        <hr>
+        <p>&copy; 2026 Smart Irrigation Advisory System</p>
+    </footer>
+
+</body>
+</html>

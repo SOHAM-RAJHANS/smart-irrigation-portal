@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="200" viewBox="0 0 300 200">
+  <rect width="300" height="130" fill="#87CEEB"/>
+  <rect y="130" width="300" height="70" fill="#8B4513"/>
+  <rect x="145" y="60" width="10" height="70" fill="#888"/>
+  <polygon points="150,50 180,60 150,65" fill="#ccc" stroke="#888" stroke-width="1"/>
+  <polygon points="150,50 120,60 150,65" fill="#aaa" stroke="#888" stroke-width="1"/>
+  <rect x="100" y="70" width="12" height="35" rx="6" fill="white" stroke="#333" stroke-width="1"/>
+  <rect x="103" y="85" width="6" height="18" fill="#f44336"/>
+  <text x="106" y="67" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">Temp</text>
+  <rect x="190" y="80" width="20" height="30" fill="white" stroke="#333" stroke-width="1"/>
+  <rect x="193" y="95" width="14" height="12" fill="#4FC3F7"/>
+  <text x="200" y="77" font-family="Arial" font-size="8" fill="#333" text-anchor="middle">Rain</text>
+  <circle cx="40" cy="35" r="20" fill="#FFD700"/>
+  <text x="150" y="185" font-family="Arial" font-size="14" fill="white" text-anchor="middle">Weather Monitoring Station</text>
+</svg>

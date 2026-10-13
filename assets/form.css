@@ -1,0 +1,63 @@
+fieldset {
+    border: 1px solid #aaa;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+legend {
+    color: #2e7d32;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: bold;
+    color: #444;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+input[type="date"],
+input[type="file"],
+select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+select:focus {
+    border-color: #2e7d32;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    padding: 8px 20px;
+    margin-right: 8px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+}
+
+input[type="submit"]:hover {
+    background-color: #388e3c;
+}
+
+input[type="reset"] {
+    background-color: #eee;
+    border: 1px solid #aaa;
+}
